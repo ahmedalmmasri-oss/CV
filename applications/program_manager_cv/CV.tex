@@ -1,0 +1,272 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%for social icons
+\usepackage{fontawesome5}
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Ahmed Almasri} \\[7.5pt]
+\textit{Project Professional | Program Manager} \\[7.5pt]
+\href{mailto:ahmed.almmasri@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ ahmed.almmasri@gmail.com} \ $|$ \
+\href{tel:+97450171138}{\raisebox{-0.05\height}\faMobile \ +974 5017 1138} \ $|$ \
+\href{https://qa.linkedin.com/in/ahmed-almasri-a327a4196}{\raisebox{-0.05\height}\faLinkedin\ https://qa.linkedin.com/in/ahmed-almasri-a327a4196} \\
+Doha, Qatar \\
+Nationality: USA \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+
+\section{Professional Summary}
+Project professional with 8+ years managing complex technical projects and large-scale programs across Qatar. Proven track record in project execution and delivery for multi-million dollar initiatives serving 6,000+ participants. Strong expertise in stakeholder coordination, budget optimization, and operational problem-solving across government, educational, and private sector environments.
+
+\textbf{Core Competencies:} Program Planning \& Execution | Stakeholder Management | Budget Optimization | Team Leadership | Technical Project Delivery | Process Optimization | Crisis Management | Client Relationship Building
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\textbf{Gamyra Tech QSTP-LLC, Doha, Qatar}
+
+\small{\textit{Program Manager \& Project Coordinator, January 2025 -- Present}}
+
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+\item Coordinate 9-month R\&D project for Qatar University involving specialized procurement requiring direct action at ministry or customs for approvals
+\item Manage customs clearance and maintain team morale during technical challenges through team-building and collaborative problem-solving
+\item Lead procurement strategy, budget allocation, and timeline coordination under tight deadlines
+\item Oversee specialized procurement requiring governmental approvals and maintain critical vendor relationships
+\item Represent company during high-level client visits and government delegations, generating new business opportunities
+\item Conduct project presentations and technical demonstrations to secure approvals and maintain partnerships
+\item Implement project tracking standards and administrative processes for regulatory compliance using Monday.com
+\end{itemize}
+
+\small{\textit{Project Engineer / Project Coordinator, February 2018 -- December 2024}}
+
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+\item Managed cross-functional teams of 5-10 in coordinating Qatar's largest VR educational initiative serving 3,741+ participants
+\item Reported outcomes directly to CEO while managing partnerships with major sponsors (Qatar Energy LNG, Qatar Energy, Oryx GTL, Pearl GTL, Dolphin Energy, Al-Khaleej Gas)
+\item Coordinated launch of Qatar Foundation's first simulator-based road safety program delivering 2,344+ training sessions
+\item Managed research-based simulator development project securing 4-year maintenance contract and additional orders
+\item Coordinated final implementation phases of national safety campaign contributing to 10,000+ participant success
+\item Implemented comprehensive project tracking systems using Monday.com for performance monitoring and reporting
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% KEY PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{Key Projects}
+
+\textbf{Magic Carpet VR Educational Program}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item Managed cross-functional team of 5-10 coordinating Qatar's largest VR initiative
+\item Oversaw partnerships with 6 major energy sponsors and delivered to 3,741+ participants
+\item Achieved 83.5\% of annual targets through high-impact event at Qatar Toy Festival
+\item Reported outcomes directly to CEO and implemented Monday.com tracking systems
+\end{itemize}
+
+\textbf{QF Driving Club Road Safety Program}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item Coordinated program launch involving Qatar Foundation leadership and 15+ schools
+\item Delivered 2,344+ individual training sessions through mobile deployment model
+\item Restructured delivery during COVID-19 disruptions and resolved stakeholder conflicts
+\item Maintained relationships with Newton School network partnerships
+\end{itemize}
+
+\textbf{Motorbike and E-scooter R\&D Simulator}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item Coordinated 9-month R\&D project for Qatar University involving governmental approvals
+\item Managed customs clearance for international components and international supplier relationships
+\item Maintained team morale during technical challenges through strategic interventions
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% PROCESS OPTIMIZATION
+%----------------------------------------------------------------------------------------
+\section{Process Optimization \& Cost Management}
+- Achieved 63\% operational cost savings through vendor negotiations and logistics optimization  
+- Developed standardized Monday.com procedures for outreach, tracking, scheduling, and monitoring  
+- Optimized transportation processes through collaboration with technical teams and vendor coordination  
+- Built strategic vendor relationships achieving priority scheduling and flexible terms  
+
+%----------------------------------------------------------------------------------------
+% BUSINESS DEVELOPMENT
+%----------------------------------------------------------------------------------------
+\section{Business Development \& Industry Engagement}
+- Completed Skalata Ventures accelerator program in Melbourne, contributing to 51 strategic deliverables  
+- Represented company at international conferences (Web Summit, WISE, Milipol, QSTP AI Week) in Qatar, Australia, Oman, Switzerland  
+- Coordinated Qatar National Library exhibition during 2022 FIFA World Cup  
+- Participated in Carnegie Mellon University case study addressing key industry questions  
+
+%----------------------------------------------------------------------------------------
+% TRAINING \& SUPPORT
+%----------------------------------------------------------------------------------------
+\section{Training \& Technical Support}
+- Developed training programs for Qatar University researchers on simulator operations and scenario development  
+- Created maintenance schedules, troubleshooting guides, and technical documentation for driving simulators  
+- Trained internal teams on technical support procedures, equipment assembly, and event coordination  
+- Supported research-based simulator development with training and troubleshooting  
+
+%----------------------------------------------------------------------------------------
+% DEVELOPMENT ENGINEER INTERN
+%----------------------------------------------------------------------------------------
+\section{Early Experience}
+
+\textbf{Development Engineer Intern}  
+\textbf{Gamyra, Doha, Qatar} (\textit{June - August 2017})
+- Led development of 35km virtual road environment using simulation software  
+- Independently learned scripting languages and asset integration techniques  
+- Supported commissioning and testing of 4 driving simulators for client projects  
+- Received company bonus and recognition for project delivery excellence  
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Bachelor of Mechanical Engineering & American University of Sharjah, Sharjah, UAE (\textit{December 2017}) \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Project Management & Program Planning • Multi-Project Coordination • Risk Assessment • Stakeholder Management • Team Leadership \\
+Technical Expertise & System Integration • Equipment Procurement • R\&D Project Support • Performance Testing • Maintenance Planning \\
+Tools \& Platforms & Monday.com • Microsoft Office Suite • Agile Methodologies \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+FE (Fundamentals of Engineering) Certified, lifetime certification (2017) • Agile Project Management \& Agile Delivery (2019) • Advanced Monday.com Project Management Platform (2020-2025) • 'Ideal Student' Achievement, American University of Sharjah (2015)
+
+%----------------------------------------------------------------------------------------
+%	KEY ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section{Key Achievements}
+- Delivered programs serving 6,000+ participants across multiple years, coordinating 50+ venue partnerships  
+- Achieved 63\% operational cost savings through strategic vendor negotiations and process optimization  
+- Managed cross-functional teams of 5-10 personnel and reported outcomes directly to CEO  
+- Led crisis management restructuring program delivery during COVID-19 disruptions  
+- Built relationships across government entities, educational institutions, and private sector sponsors  
+- Secured 4-year maintenance contracts and multi-million dollar project partnerships  
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+\section{References}
+Raffat Zreik, CEO of Gamyra (+974 5521 0849) • Omar Khan, CTO of Gamyra (+974 5208 7337)
+
+\center{\footnotesize References available upon request | Last updated: \today}
+
+\end{document}

@@ -1,0 +1,213 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%for social icons
+\usepackage{fontawesome5}
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Ahmed Almasri} \\[7.5pt]
+\textit{Project Engineer | Program Manager} \\[7.5pt]
+\href{mailto:your.email@example.com}{\raisebox{-0.05\height}\faEnvelope \ your.email@example.com} \ $|$ \
+\href{tel:+974XXXXXXXX}{\raisebox{-0.05\height}\faMobile \ +974 XXXX XXXX} \ $|$ \
+\href{https://linkedin.com/in/yourprofile}{\raisebox{-0.05\height}\faLinkedin\ yourprofile} \\
+Doha, Qatar \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+
+\section{Professional Summary}
+Project Engineer with 8+ years delivering complex technical projects in simulation technology and immersive experiences. Proven track record managing multi-million dollar proposals, multi-stakeholder coordination, and achieving 63\% cost savings. Expert in technical R\&D, government relations, and international business development. Managed programs engaging 10,000+ participants across education, road safety, and research initiatives.
+
+\textbf{Core Competencies:} Project Management | Technical Delivery | Cost Optimization | Government Relations | Business Development | Quality Assurance | Client Relationships | Crisis Management
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\textbf{Gamyra} | Qatar Science \& Technology Park, Doha, Qatar
+
+\begin{joblong}{Program Manager}{Jan 2025 -- Present}
+\item Company representative to ministries and international delegations, securing government contracts and expo invitations
+\item Manage financial operations, government compliance, and office administration for technology startup
+\item Oversee procurement, business development, and program expansion strategies
+\end{joblong}
+
+\begin{joblong}{Project Engineer -- Magic Carpet VR Program}{Jan 2022 -- Dec 2024}
+\item Managed immersive educational VR program engaging \textbf{3,741 participants} over 3 years
+\item Coordinated 6 major oil \& gas sponsors (QatarGas, Qatar Energy, Dolphin Energy)
+\item Achieved \textbf{63\% cost reduction} in logistics through strategic negotiation and process optimization
+\item Standardized event management, scaling to dozens of annual events using Monday.com
+\end{joblong}
+
+\begin{joblong}{Project Engineer -- QF Driving Club}{Jan 2022 -- Dec 2024}
+\item Launched QF's first permanent road safety center, delivering \textbf{2,344 training sessions}
+\item Coordinated across 6+ QF departments to secure multi-year sponsorship
+\item Overcame COVID-19 challenges by restructuring delivery model and optimizing throughput
+\end{joblong}
+
+\begin{joblong}{Project Engineer -- STISCAN Research Simulator}{Jan 2021 -- Dec 2021}
+\item Developed custom research simulator for Qatar University using advanced simulation platform
+\item Created virtual environments with GIS mapping and 3D modeling
+\item Secured 4+ year maintenance contract through client relationship management
+\item Trained researchers on simulator operation and scenario development
+\end{joblong}
+
+\begin{joblong}{Project Engineer -- Road Safety Initiatives}{Jan 2017 -- Dec 2019}
+\item Managed national road safety programs, contributing to 14,000+ simulator sessions
+\item Coordinated nationwide visits across QF schools and universities
+\item Produced bilingual client reports and press materials for stakeholders
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+% KEY PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{Key Projects}
+
+\textbf{Major Initiatives:}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item \textbf{Oman Government Proposal:} Advanced 21.25M QAR contract to final stage against 100+ competitors
+\item \textbf{Business Development:} Generated international contacts at Web Summit 2024 and Milipol 2024
+\item \textbf{Strategic Partnerships:} Established Arkan Safety Institute partnership with 250K QAR procurement
+\item \textbf{Custom Engineering:} Designed 4-GPU workstation achieving water-cooled performance; delivered VR/Qatar Library exhibition
+\item \textbf{Academic Case Study:} Selected by Carnegie Mellon University for graduate course on high-tech strategy
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+[Year] & \textbf{[Your Degree]} in \textbf{[Your Major]} at \textbf{[Your University]}, [Location] \\
+2017 & FE (Fundamentals of Engineering) Certified \\
+2015 & 'Ideal Student' Achievement, American University of Sharjah \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Engineering & Simulation Software, 3D Modeling, GIS Mapping, Hardware Engineering, Thermal Management, VR/AR Systems \\
+Management & Monday.com, Multi-Stakeholder Coordination, Budget Management, Risk Assessment, Process Standardization \\
+Business & Proposal Development, Government Relations, International Procurement, Client Relationships, Cost Optimization \\
+Languages & Fluent Arabic \& English \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+FE (Fundamentals of Engineering), 2017 | Agile Crash Course: Agile Project Management, 2019
+
+\vfill
+\center{\footnotesize References available upon request | Last updated: \today}
+
+\end{document}

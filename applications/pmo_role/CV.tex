@@ -1,0 +1,232 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%for social icons
+\usepackage{fontawesome5}
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Ahmed Almasri} \\[7.5pt]
+\textit{PMO Advisor | Assets Affairs Department} \\[7.5pt]
+\href{mailto:your.email@example.com}{\raisebox{-0.05\height}\faEnvelope \ your.email@example.com} \ $|$ \
+\href{tel:+974XXXXXXXX}{\raisebox{-0.05\height}\faMobile \ +974 XXXX XXXX} \ $|$ \
+\href{https://linkedin.com/in/yourprofile}{\raisebox{-0.05\height}\faLinkedin\ yourprofile} \\
+Doha, Qatar \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+
+\section{Professional Summary}
+Experienced Program Manager with 8+ years delivering complex projects and programs in simulation technology and educational initiatives. Proven track record managing multi-million dollar proposals, coordinating multi-stakeholder initiatives, and achieving significant cost optimizations (63\% logistics savings). Expert in stakeholder management, risk assessment, and strategic advisory for organizational transformation. Led portfolio management overseeing project allocation, prioritization, and performance monitoring in government-adjacent environments. Strong background in compliance, process optimization, and change management within multidisciplinary organizations.
+
+\textbf{Core Competencies:} Program Portfolio Management | Strategic Advisory | Stakeholder Engagement | Risk Assessment | Process Compliance | Change Management | Contract Management | Financial Oversight | Quality Assurance | Project Lifecycle Management
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\textbf{Gamyra} | Doha, Qatar
+
+\small{\textit{PMO Advisor \& Program Manager, January 2025 -- Present}}
+
+\begin{joblong}{\emph{}}{}
+\item Oversee entire portfolio of projects and programs, managing resource allocation, prioritizing initiatives based on strategic objectives, and monitoring performance across departments
+\item Provide expert technical, strategic, and financial business advice on operational and maintenance activities to executive management
+\item Ensure departments compliance with all processes and procedures to meet set targets and compliance to KPIs
+\item Advise or manage project management consultants to control operational risks, realize contract benefits, and ensure regulatory compliance
+\item Monitor, organize and conduct appropriate activities to manage risks, progress of works, and financial performance
+\item Collaborate with other sections and departments to undertake all activities necessary to achieve KPIs through agreed activities and outputs
+\item Review risk assessments of assets and identify modifications required to manage departmental performance
+\end{joblong}
+
+\vspace{5pt}
+
+\small{\textit{Program Manager / Project Engineer, January 2021 -- December 2024}}
+
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+\item Led portfolio management: planning, organizing, scheduling, tracking projects/programs through lifecycles
+\item Coordinated multi-stakeholder initiatives and sponsor partnerships, achieving 63\% cost reduction
+\item Risk assessment, performance monitoring, compliance management for operational programs and contracts
+\item Strategic advisory on policy decisions, organizational transformation, financial aspects of operations
+\item Interpreted and communicated regulations affecting business activities, ensuring process compliance
+\item Managed high-profile programs (3,741 participants), change management, executive reporting
+\item Technical project delivery, stakeholder coordination, safety adherence in multidisciplinary teams
+\end{itemize}
+
+\vspace{5pt}
+%----------------------------------------------------------------------------------------
+% KEY PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{Key Projects}
+
+\textbf{Asset Affairs Program Management -- Magic Carpet VR Initiative}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item Oversaw program portfolio for immersive educational VR system reaching 3,741 participants
+\item Managed resource allocation across 6 sponsor partnerships and operational teams
+\item Risk assessment and financial performance monitoring to achieve program objectives
+\item Strategic prioritization of activities based on departmental targets and KPIs
+\item Change management through collaborative efforts with multiple departments and government entities
+\end{itemize}
+
+\textbf{VIP Project Delivery -- Qatar National Library Football Exhibition}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item Managed high-pressure project delivery within tight deadlines for international event during World Cup
+\item Coordinated multi-stakeholder engagement (government entities, sponsors) for flawless execution
+\item Maintained highest standards of professional conduct and ethics in high-profile environment
+\item Client relationship management resulting in positive feedback and future collaboration opportunities
+\end{itemize}
+
+\textbf{International Business Development -- Web Summit Participation}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item Remote coordination and follow-up for international conference networking
+\item Prepared documentation and reports for potential business opportunities
+\item Client contact management and relationship development
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2017 & Bachelor's Degree of Engineering at American University of Sharjah, Sharjah, UAE \\
+2017 & FE (Fundamentals of Engineering) Certified \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Project Management \& Advisory & Program Lifecycle Management | Strategic Planning | Risk Assessment | Stakeholder Management | Financial Advisory | Process Compliance | Change Management | Contract Oversight \\
+Technical Expertise & Simulation Software | Quality Assurance | Hardware Engineering | VR/AR Systems | Compliance Management | Safety Procedures | Regulatory Frameworks \\
+Business Administration & Resource Allocation | Performance Monitoring | Budget Analysis | Proposal Development | Government Relations | Operations Optimization \\
+Languages & Fluent Arabic and English \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+FE (Fundamentals of Engineering), 2017 | Agile Crash Course: Agile Project Management, 2019 | Skalata Ventures Accelerator Program, 2019 (51 business deliverables completed)
+
+%----------------------------------------------------------------------------------------
+%	KEY ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section{Key Achievements}
+- Managed portfolio of projects and programs exceeding annual KPIs  
+- Achieved 63\% cost reduction through process optimization and strategic planning  
+- Engaged 3,741 participants through effective program execution and stakeholder coordination  
+- Expertise in government relations and regulatory compliance management  
+- Advanced multiple business development proposals securing contract opportunities
+
+\center{\footnotesize References available upon request | Last updated: \today}
+
+\end{document}

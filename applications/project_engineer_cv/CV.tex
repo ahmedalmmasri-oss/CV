@@ -1,0 +1,228 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%for social icons
+\usepackage{fontawesome5}
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Ahmed Almasri} \\[7.5pt]
+\textit{Project Engineer | Simulation and Technology Development} \\[7.5pt]
+\href{mailto:your.email@example.com}{\raisebox{-0.05\height}\faEnvelope \ your.email@example.com} \ $|$ \
+\href{tel:+974XXXXXXXX}{\raisebox{-0.05\height}\faMobile \ +974 XXXX XXXX} \ $|$ \
+\href{https://linkedin.com/in/yourprofile}{\raisebox{-0.05\height}\faLinkedin\ yourprofile} \\
+Doha, Qatar \\
+\end{tabularx}
+
+\vspace{-20pt}
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+
+\section{Professional Summary}
+Results-driven Project Engineer with 8+ years of experience in technical project delivery within simulation, VR/AR, and immersive technology environments. Expert in managing complex technical projects from concept to delivery, ensuring quality, compliance, and stakeholder satisfaction. Proven track record coordinating multidisciplinary teams, managing risk assessments, and delivering innovative solutions in government-adjacent sectors. Strong background in hardware/software integration, quality assurance, and international procurement in the GCC region.
+
+\textbf{Core Competencies:} Technical Project Management | Hardware/Software Integration | Risk Assessment | Stakeholder Coordination | Quality Assurance | Simulation Technology | Hardware Engineering | Regulatory Compliance
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\textbf{Gamyra} | Doha, Qatar
+
+\small{\textit{Project Engineer / Development Engineer}, January 2017 -- December 2024}
+
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+\item Managed technical project lifecycle for simulation and immersive experience systems
+\item Coordinated client requirements analysis and delivered technical solutions meeting specifications
+\item Oversaw hardware and software integration for complex simulation platforms
+\item Conducted risk assessments and implemented mitigation strategies for technical projects
+\item Ensured compliance with technical standards, quality procedures, and regulatory frameworks
+\item Collaborated with multidisciplinary teams of engineers, developers, and stakeholders
+\item Delivered project reports, documentation, and technical demonstrations
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% KEY PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{Key Projects}
+
+\textbf{Custom Research Simulator Development (2021)}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item Developed advanced simulator for Qatar University research applications
+\item Managed project from concept through delivery, ensuring research-grade performance
+\item Integrated GIS mapping, 3D environments, and simulation software
+\item Conducted iterative client demonstrations and secured 4+ year maintenance contract
+\end{itemize}
+
+\textbf{Custom High-Performance Rendering Workstation (2019)}
+\begin{itemize}[nosep,after=\strut, leftmargin=1.3em, itemsep=2pt,label=--]
+\item Designed and built extreme-performance 4-GPU workstation for animation production
+\item Overcame thermal throttling challenges through innovative hardware integration
+\item Achieved benchmark performance rivaling air-cooled water-core systems
+\item Maintained 24/7 operation for multiple years of professional production
+\end{itemize}
+
+\textbf{Magic Carpet VR Educational Program (2022-2024)}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item Managed technical delivery of immersive VR educational system
+\item Coordinated hardware installation and quality assurance for 3,741+ participants
+\item Implemented safety protocols and technical support procedures
+\end{itemize}
+
+\pagebreak
+
+\textbf{QF Driving Club Infrastructure (2022-2024)}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+\item Engineered technical setup of permanent road safety training center
+\item Managed facility design, equipment installation, and compliance requirements
+\item Coordinated multidisciplinary construction and implementation teams
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2017 & Bachelor's Degree of Engineering at American University of Sharjah, Sharjah, UAE \\
+2017 & FE (Fundamentals of Engineering) Certified \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Engineering \& Hardware & Simulation Systems | 3D Modeling | Hardware Engineering | Thermal Management | GIS Mapping | VR/AR Technology \\
+Project Management & Technical Project Delivery | Risk Assessment | Stakeholder Coordination | Quality Assurance | Process Compliance \\
+Software \& Tools & SCANeR Simulation Software | CAD Tools | Performance Benchmarking Software | Project Management Platforms \\
+Languages & Fluent Arabic and English \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+FE (Fundamentals of Engineering), 2017 | Agile Crash Course: Agile Project Management, 2019 | Skalata Ventures Accelerator Program, 2019 (51 business deliverables completed)
+
+%----------------------------------------------------------------------------------------
+%	KEY ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section{Key Achievements}
+- Designed custom research simulator securing 4+ year ongoing maintenance contract  
+- Built high-performance workstation achieving top-tier benchmark performance  
+- Managed technical projects affecting 10,000+ participants across education initiatives  
+- Developed innovative solutions for thermal management and hardware performance  
+- Coordinated international procurement and customs processes across multiple countries  
+
+\vfill
+\center{\footnotesize References available upon request | Last updated: \today}
+
+\end{document}
